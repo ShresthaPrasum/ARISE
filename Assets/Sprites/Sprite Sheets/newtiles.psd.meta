@@ -121,10 +121,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: newtiles_23
+      name: newtiles_13
       rect:
         serializedVersion: 2
-        x: 768
+        x: 769
         y: 768
         width: 128
         height: 128
@@ -209,7 +209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_33
+      name: newtiles_17
       rect:
         serializedVersion: 2
         x: 1024
@@ -253,11 +253,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_14
+      name: newtiles_10
       rect:
         serializedVersion: 2
-        x: 768
-        y: 896
+        x: 767
+        y: 897
         width: 128
         height: 128
       alignment: 0
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_15
+      name: newtiles_11
       rect:
         serializedVersion: 2
         x: 896
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_16
+      name: newtiles_12
       rect:
         serializedVersion: 2
         x: 1024
@@ -319,7 +319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_24
+      name: newtiles_14
       rect:
         serializedVersion: 2
         x: 1024
@@ -341,10 +341,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_31
+      name: newtiles_15
       rect:
         serializedVersion: 2
-        x: 768
+        x: 767
         y: 640
         width: 128
         height: 128
@@ -363,10 +363,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_32
+      name: newtiles_16
       rect:
         serializedVersion: 2
-        x: 896
+        x: 895
         y: 640
         width: 128
         height: 128
@@ -494,6 +494,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: newtiles_0
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 821
+        width: 255
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64388ff0f5edbf0428ac7ef0e503f6fd
+      internalID: -3816108115825304496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -512,25 +534,22 @@ TextureImporter:
     nameFileIdTable:
       newtiles_0: -3816108115825304496
       newtiles_1: 1569317431
-      newtiles_12: 1280224168
-      newtiles_13: -1631791263
-      newtiles_14: 1936231528
-      newtiles_15: -1995158752
-      newtiles_16: 683264660
-      newtiles_17: 1281035167
+      newtiles_10: 1936231528
+      newtiles_11: -1995158752
+      newtiles_12: 683264660
+      newtiles_13: -673769227
+      newtiles_14: 1038897408
+      newtiles_15: 1849701547
+      newtiles_16: 1699147075
+      newtiles_17: -1245621184
       newtiles_18: 2117420635
       newtiles_2: 256931700
       newtiles_21: -547963609
       newtiles_22: -936052658
-      newtiles_23: -673769227
-      newtiles_24: 1038897408
       newtiles_25: -1547978767
       newtiles_26: -1639366681
       newtiles_27: 1555858357
       newtiles_3: -869623500
-      newtiles_31: 1849701547
-      newtiles_32: 1699147075
-      newtiles_33: -1245621184
       newtiles_34: -937787900
       newtiles_38: -891423898
       newtiles_39: 763923539
