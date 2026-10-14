@@ -1,16 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class player : MonoBehaviour
+public class PratikChalise : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float moveSpeed = 5f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private float jumpForce = 12f;
+
+    
 }
