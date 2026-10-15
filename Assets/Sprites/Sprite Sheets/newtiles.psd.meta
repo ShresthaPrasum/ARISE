@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,7 +83,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,11 +121,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: newtiles_13
+      name: newtiles_14
       rect:
         serializedVersion: 2
-        x: 769
-        y: 768
+        x: 768
+        y: 896
         width: 128
         height: 128
       alignment: 0
@@ -133,17 +133,52 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 64, y: -33}
+        - {x: 64, y: 64}
+        - {x: -63, y: 64}
+        - {x: -64, y: 63}
+        - {x: -64, y: -64}
+        - {x: 34, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: e2b716a8775c81143a0872bc3c63dc1c
-      internalID: -673769227
+      spriteID: c02695d8c520d234fa2055d38cd7031c
+      internalID: 1038897408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_1
+      name: newtiles_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 896
+        width: 127
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 64, y: 63}
+        - {x: 63, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -33}
+        - {x: -49, y: -49}
+        - {x: -33, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0429278e332b03d4389ee9af3d0fc389
+      internalID: 1699147075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newtiles_29
       rect:
         serializedVersion: 2
         x: 384
@@ -155,17 +190,21 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 64, y: 31}
+        - {x: -30, y: 31}
+        - {x: -30, y: -63}
+        - {x: 64, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: c50eed12230fad74b9a118bae4283319
-      internalID: 1569317431
+      spriteID: 3836ffe091147aa438190ab8623d9670
+      internalID: -1008116025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_2
+      name: newtiles_30
       rect:
         serializedVersion: 2
         x: 512
@@ -177,17 +216,21 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 64, y: 31}
+        - {x: -64, y: 31}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: bc72ae0ff0c1ddd4a8eeaf056b572754
-      internalID: 256931700
+      spriteID: 553463f958a05f74caf20f1a6f7dbe1b
+      internalID: -630257858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_3
+      name: newtiles_31
       rect:
         serializedVersion: 2
         x: 640
@@ -199,21 +242,25 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29, y: 33}
+        - {x: -64, y: 33}
+        - {x: -64, y: -64}
+        - {x: 30, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: 48462929551c9d04baf85877ab320049
-      internalID: -869623500
+      spriteID: 12035969ebffeab4e8cc3e577c8153ce
+      internalID: 416987746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_17
+      name: newtiles_32
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 639
+        x: 768
+        y: 640
         width: 128
         height: 128
       alignment: 0
@@ -221,17 +268,51 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 64, y: 33}
+        - {x: 33, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -63}
+        - {x: -63, y: -64}
+        - {x: 64, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: 2303aa38d5b27cd479b9fe19c826bfd6
-      internalID: -1245621184
+      spriteID: 46b95030b4413a247b92ec7f5063b887
+      internalID: -61614191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_4
+      name: newtiles_34
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 64, y: -63}
+        - {x: 64, y: 64}
+        - {x: -33, y: 64}
+        - {x: -64, y: 32}
+        - {x: -64, y: -64}
+        - {x: 63, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3147929c7b53ae94fa053ad7077a5f4f
+      internalID: -937787900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newtiles_36
       rect:
         serializedVersion: 2
         x: 384
@@ -243,153 +324,25 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -32, y: 64}
+        - {x: -32, y: -64}
+        - {x: 64, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: 7d66efa0ca61bbb46b9e98d27efcb8df
-      internalID: 348505646
+      spriteID: 783c5835a61628c4a9eb4f000b90e7b0
+      internalID: 326089739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_10
-      rect:
-        serializedVersion: 2
-        x: 767
-        y: 897
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a12c72483322fd648b0f5a8b93dfab49
-      internalID: 1936231528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newtiles_11
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a99f6b0637befe49ac72768fd6b4c93
-      internalID: -1995158752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newtiles_12
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95295af24bb0d444c88afc4ce8a3ee62
-      internalID: 683264660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newtiles_14
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 768
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c02695d8c520d234fa2055d38cd7031c
-      internalID: 1038897408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newtiles_15
-      rect:
-        serializedVersion: 2
-        x: 767
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8355eb12a9653a4d80051a22bb6cbe2
-      internalID: 1849701547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newtiles_16
-      rect:
-        serializedVersion: 2
-        x: 895
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0429278e332b03d4389ee9af3d0fc389
-      internalID: 1699147075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newtiles_5
+      name: newtiles_37
       rect:
         serializedVersion: 2
         x: 512
-        y: 511
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -397,21 +350,25 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: 1ead5914bb0bf964ebf1ffdcac3033ce
-      internalID: -1175331246
+      spriteID: 16b75f0ad18521e43830671737b1c8ec
+      internalID: -760300700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_6
+      name: newtiles_38
       rect:
         serializedVersion: 2
         x: 640
-        y: 511
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -419,17 +376,21 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 30, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 30, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: c306fb91b73ee1d4eaf1f356233afb6e
-      internalID: -2093265651
+      spriteID: b98c3cc9b9dc39940a00e6d472d6ff1f
+      internalID: -891423898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_7
+      name: newtiles_43
       rect:
         serializedVersion: 2
         x: 384
@@ -441,17 +402,21 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -31, y: 64}
+        - {x: -31, y: -30}
+        - {x: 64, y: -31}
       tessellationDetail: 0
       bones: []
-      spriteID: 2a56f1c823d3f7f46bb1c35925b3945a
-      internalID: -1493849836
+      spriteID: 1c480b10f1a124c4684853de510eedc9
+      internalID: -473735511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_8
+      name: newtiles_44
       rect:
         serializedVersion: 2
         x: 512
@@ -463,20 +428,24 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -31}
+        - {x: 64, y: -31}
       tessellationDetail: 0
       bones: []
-      spriteID: aaa11897718c58a4ab996faff388eebe
-      internalID: 540214576
+      spriteID: 52f832dc19e766048956c4b18a8f999c
+      internalID: -2032006368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newtiles_9
+      name: newtiles_45
       rect:
         serializedVersion: 2
-        x: 639
+        x: 640
         y: 384
         width: 128
         height: 128
@@ -485,33 +454,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 31, y: 64}
+        - {x: -63, y: 64}
+        - {x: -63, y: -31}
+        - {x: 30, y: -31}
       tessellationDetail: 0
       bones: []
-      spriteID: d124f3c5d33675d47bd5355df5189686
-      internalID: 1516245432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newtiles_0
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 821
-        width: 255
-        height: 201
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64388ff0f5edbf0428ac7ef0e503f6fd
-      internalID: -3816108115825304496
+      spriteID: 6c8ec5c1e35b1734c91297037d75185f
+      internalID: 262114603
       vertices: []
       indices: 
       edges: []
@@ -543,19 +494,40 @@ TextureImporter:
       newtiles_16: 1699147075
       newtiles_17: -1245621184
       newtiles_18: 2117420635
+      newtiles_19: 825919717
       newtiles_2: 256931700
+      newtiles_20: 2039640476
       newtiles_21: -547963609
       newtiles_22: -936052658
+      newtiles_23: 818172622
+      newtiles_24: -544711257
       newtiles_25: -1547978767
       newtiles_26: -1639366681
       newtiles_27: 1555858357
+      newtiles_28: 1278496982
+      newtiles_29: -1008116025
       newtiles_3: -869623500
+      newtiles_30: -630257858
+      newtiles_31: 416987746
+      newtiles_32: -61614191
+      newtiles_33: 245380848
       newtiles_34: -937787900
+      newtiles_35: 2053887456
+      newtiles_36: 326089739
+      newtiles_37: -760300700
       newtiles_38: -891423898
       newtiles_39: 763923539
       newtiles_4: 348505646
       newtiles_40: -270493436
       newtiles_41: 312903104
+      newtiles_42: -186793761
+      newtiles_43: -473735511
+      newtiles_44: -2032006368
+      newtiles_45: 262114603
+      newtiles_46: -169696882
+      newtiles_47: -732331916
+      newtiles_48: -1931376367
+      newtiles_49: 1640272334
       newtiles_5: -1175331246
       newtiles_6: -2093265651
       newtiles_7: -1493849836

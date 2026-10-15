@@ -42,11 +42,13 @@ public class PratikChalise : MonoBehaviour
 
         );
 
-        if (Input.GetKey(KeyCode.D))
+        horizontalInput = 0f;
+
+        if (Keyboard.current.dKey.isPressed)
         {
             horizontalInput = 1f;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Keyboard.current.aKey.isPressed)
         {
             horizontalInput = -1f;
         }
@@ -97,16 +99,17 @@ public class PratikChalise : MonoBehaviour
             jumpCall = false;
         }
 
-        void OnDrawGizmosSelected()
-        {
-            if(groundCheck == null)
-            return;
-
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
-        }     
+        
     
     }
+    void OnDrawGizmosSelected()
+    {
+        if(groundCheck == null)
+        return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+    }     
 
 
 }
