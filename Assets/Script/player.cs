@@ -137,6 +137,7 @@ public class PratikChalise : MonoBehaviour
             return;
         }
         animator.SetBool("isRunning", Mathf.Abs(horizontalInput) > 0.01f);
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     private void OnDrawGizmosSelected()
