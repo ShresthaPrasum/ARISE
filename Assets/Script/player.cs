@@ -130,10 +130,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocityY = jumpForce;
 
-            if (animator != null)
-            {
-                animator.SetTrigger("takeOff");
-            }
 
             jumpQueued = false;
         }
@@ -194,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        
+
 
         Gizmos.color = Color.red;
 
