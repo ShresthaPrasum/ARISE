@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PratikChalise : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 7f;
     public float jumpForce = 12f;
@@ -25,18 +25,30 @@ public class PratikChalise : MonoBehaviour
     private bool isGrounded;
     private bool jumpCall;
     private bool jumpQueued;
+
+    public bool isDead =false;
+
+    private Vector3 respawnPoint;
     
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        respawnPoint = transform.position;
         
         rb.linearDamping = 0f;
+
     }
+
+    
 
     private void Update()
     {
+
+        if (isDead)
+        {
+            return;
+        }
         isGrounded = Physics2D.OverlapCircle(
             groundCheck.position,
             checkRadius,
@@ -48,13 +60,12 @@ public class PratikChalise : MonoBehaviour
 
         if (Keyboard.current != null)
         {
-            if (Keyboard.current.dKey.isPressed)
+            if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
             {
-                
                 horizontalInput = 1f;
             }
 
-            if (Keyboard.current.aKey.isPressed)
+            if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
             {
                 
                 horizontalInput = -1f;
@@ -107,6 +118,12 @@ public class PratikChalise : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isDead)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+        
         rb.linearVelocityX = horizontalInput * moveSpeed;
 
         if (jumpQueued)
@@ -140,10 +157,44 @@ public class PratikChalise : MonoBehaviour
         animator.SetBool("isGrounded", isGrounded);
     }
 
+    public void setCheckpoint(Vector3 newPoint)
+    {
+        respawnPoint = newPoint;
+    }
+
+    public void Die()
+    {
+        if (isDead)
+        {
+            return;
+        }
+
+        isDead = true;
+        rb.linearVelocity = Vector2.zero;
+
+        if(animator!= null)
+        {
+            animator.SetTrigger("die");
+        }
+
+        Invoke(nameof(Respawn), 1f);
+    }
+
+    public void Respawn()
+    {
+        transform.position = respawnPoint;
+
+        rb.linearVelocity = Vector2.zero;
+
+        isDead = false;
+    }
     private void OnDrawGizmosSelected()
     {
         if (groundCheck == null)
+        {
             return;
+        }
+        
 
         Gizmos.color = Color.red;
 
