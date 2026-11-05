@@ -355,6 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3766664624680043298}
   - component: {fileID: -745934216708186766}
+  - component: {fileID: 1565996830356778251}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -422,6 +423,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
+--- !u!114 &1565996830356778251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3933202980415325017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ae81aebea0edd459344e0b655cd454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkeletonServant
+  groundLayerIndex: 6
+  riseDepth: 1.5
+  riseSpeed: 4
 --- !u!1 &4343801914784972904
 GameObject:
   m_ObjectHideFlags: 0
