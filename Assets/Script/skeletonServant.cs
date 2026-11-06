@@ -46,10 +46,5 @@ public class SkeletonServant : MonoBehaviour
         if (rb != null) rb.bodyType = RigidbodyType2D.Dynamic;
         if (boxCollider != null) boxCollider.enabled = true;
     }
-    public void SetDirection(float dir)
-    {
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * dir;
-        transform.localScale = scale;
-    }
+
 }

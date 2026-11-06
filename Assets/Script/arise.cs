@@ -20,7 +20,7 @@ public class SkeletonSummoner : MonoBehaviour
 
     public Animator playerAnimator;
     private SkeletonServant currentSkeleton;
-    private Vector2 spawnPosition;
+    public Vector2 spawnPosition;
     private bool canSummonHere;
     private Camera mainCam;
     private PlayerMovement player;
@@ -44,7 +44,6 @@ public class SkeletonSummoner : MonoBehaviour
 
     private void CheckMousePosition()
     {
-        if (Mouse.current == null || mainCam == null) return;
 
         Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
 
@@ -86,7 +85,6 @@ public class SkeletonSummoner : MonoBehaviour
 
     private void UpdateIndicator(Vector2 position, bool isValid)
     {
-        if (indicator == null) return;
         indicator.position = position;
         
         if (indicatorRenderer != null) 
@@ -120,23 +118,15 @@ public class SkeletonSummoner : MonoBehaviour
         GameObject newObj = Instantiate(skeletonPrefab, spawnPosition, Quaternion.identity);
         currentSkeleton = newObj.GetComponent<SkeletonServant>();
 
+            playerAnimator.SetTrigger("Arise");
         
-        float dir = Mathf.Sign(transform.localScale.x);
-        currentSkeleton.SetDirection(dir);
-
-        if (playerAnimator != null) 
-        {
-            playerAnimator.SetTrigger("summon");
-        }
     }
 
     public void DismissSkeleton()
     {
-        if (currentSkeleton != null)
-        {
             Destroy(currentSkeleton.gameObject);
             currentSkeleton = null;
-        }
+            playerAnimator.ResetTrigger("Arise");
     }
 
     private void OnDrawGizmos()

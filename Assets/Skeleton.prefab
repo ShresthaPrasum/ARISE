@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8222227522640127958}
-  - component: {fileID: 1079636532763586004}
-  m_Layer: 0
+  - component: {fileID: 7985665312849670064}
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +26,14 @@ Transform:
   m_GameObject: {fileID: 777768750684428072}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2, y: 1.626, z: 0}
+  m_LocalPosition: {x: 0.019, y: 1.613, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3766664624680043298}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1079636532763586004
-CapsuleCollider2D:
+--- !u!61 &7985665312849670064
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -66,9 +66,18 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.022193313, y: -0.63555}
-  m_Size: {x: 0.60779595, y: 2.2711}
-  m_Direction: 0
+  m_Offset: {x: -0.024113059, y: -0.6022854}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.90063787, y: 2.3171}
+  m_EdgeRadius: 0
 --- !u!1 &857643267200182807
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4391744615643675130}
   - component: {fileID: 2541792638412274909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Torso (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 857643267200182807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.18223555, w: 0.9832549}
-  m_LocalPosition: {x: 3.37, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0.191, y: 0.197, z: 0}
   m_LocalScale: {x: 0.23327586, y: 1.0748099, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -171,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5235116012854882651}
   - component: {fileID: 2980729099357710887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Torso (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +196,7 @@ Transform:
   m_GameObject: {fileID: 2413112140369385032}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.26047087, w: 0.9654817}
-  m_LocalPosition: {x: 2.9064, y: 1.173, z: 0}
+  m_LocalPosition: {x: -0.287, y: 1.16, z: 0}
   m_LocalScale: {x: 0.22859117, y: 1.096837, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -263,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4055478698840952223}
   - component: {fileID: 1375946980265951006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Torso (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 3493866029136678839}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.18223555, w: 0.9832549}
-  m_LocalPosition: {x: 2.966, y: 0.2, z: 0}
+  m_LocalPosition: {x: -0.19, y: 0.215, z: 0}
   m_LocalScale: {x: 0.22859117, y: 1.0968367, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -354,9 +363,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3766664624680043298}
-  - component: {fileID: -745934216708186766}
   - component: {fileID: 1565996830356778251}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,8 +381,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.44, y: 1.44, z: 1.44}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 981729000896888344}
   - {fileID: 3164998269182890341}
@@ -386,43 +394,6 @@ Transform:
   - {fileID: 5554840009712239413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &-745934216708186766
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3933202980415325017}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
 --- !u!114 &1565996830356778251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonServant
   groundLayerIndex: 6
-  riseDepth: 1.5
+  riseDepth: 2.68
   riseSpeed: 4
 --- !u!1 &4343801914784972904
 GameObject:
@@ -448,7 +419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9050156257750479724}
   - component: {fileID: 6236984588498078217}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Torso (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 4343801914784972904}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.2604693, w: 0.9654822}
-  m_LocalPosition: {x: 3.434, y: 1.177, z: 0}
+  m_LocalPosition: {x: 0.269, y: 1.174, z: 0}
   m_LocalScale: {x: 0.23327586, y: 1.0748099, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -540,7 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981729000896888344}
   - component: {fileID: 191397291353019524}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +527,7 @@ Transform:
   m_GameObject: {fileID: 4351137425607409746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1792002, y: 1.9536, z: -1.01}
+  m_LocalPosition: {x: 0, y: 1.9536, z: -1.01}
   m_LocalScale: {x: 0.6324, y: 0.6197, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -632,7 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3164998269182890341}
   - component: {fileID: 7901081949973838775}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -648,7 +619,7 @@ Transform:
   m_GameObject: {fileID: 8725484309997177924}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1714, y: 1.1794, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1794, z: 0}
   m_LocalScale: {x: 0.23327586, y: 1.0748099, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -723,7 +694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5554840009712239413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +710,7 @@ Transform:
   m_GameObject: {fileID: 9122717241109063661}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.148, y: -0.134, z: 0}
+  m_LocalPosition: {x: 0.04, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
