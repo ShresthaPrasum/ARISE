@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
             if (Keyboard.current.spaceKey.wasReleasedThisFrame ||Keyboard.current.wKey.wasReleasedThisFrame)
             {
                 jumpCall = true;
+                animator.SetTrigger("isJumping");
             }
         }
 
@@ -109,11 +110,6 @@ public class PlayerMovement : MonoBehaviour
             coyoteCounter = 0f;
         }
 
-        
-        if (animator != null)
-        {
-            animator.SetBool("isJumping", !isGrounded);
-        }
     }
 
     private void FixedUpdate()
@@ -129,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
         if (jumpQueued)
         {
             rb.linearVelocityY = jumpForce;
-
+            
 
             jumpQueued = false;
         }
