@@ -7,16 +7,20 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 12f;
     
     public Transform groundCheck;
-    public float checkRadius = 0.2f;
+
+    public Vector2 checkSize = new Vector2(0.6f, 0.1f);
     public LayerMask groundLayer;
+
     public Animator animator;
 
     private Rigidbody2D rb;
 
     private float horizontalInput;
+    
     private float coyoteCounter;
     
     public float jumpCutMultiplier = 0.69f;
+
     public float gracePeriod = 0.12f;
     public float jumpBufferTime = 0.12f;
     private float jumpForgiveTimer;
@@ -49,11 +53,11 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        isGrounded = Physics2D.OverlapCircle(
+        isGrounded = Physics2D.OverlapBox(
             groundCheck.position,
-            checkRadius,
-            groundLayer
-        );
+         checkSize,
+          0f,
+          groundLayer);
 
         
         horizontalInput = 0f;
@@ -190,9 +194,6 @@ public class PlayerMovement : MonoBehaviour
 
         Gizmos.color = Color.red;
 
-        Gizmos.DrawWireSphere(
-            groundCheck.position,
-            checkRadius
-        );
+        Gizmos.DrawWireCube(groundCheck.position, checkSize);
     }
 }
