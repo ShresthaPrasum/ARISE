@@ -23,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
     // private bool facingRight = true;
     public bool isDead = false;
     private Vector3 respawnPoint;
+
+    public AudioSource audioSource;
+
+    public AudioClip walkSound;
+
     
     public Menu PauseMenu; // Reference to the Menu script
 
@@ -98,6 +103,15 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = (rb.linearVelocityY < 0f) ? droppingGravity : normalGravity;
     }
 
+
+    public void FootSteps()
+    {
+
+        if (isGrounded && audioSource != null && walkSound != null)
+        {
+            audioSource.PlayOneShot(walkSound);
+        }
+    }
     private void Jump()
     {
         rb.linearVelocityY = jumpForce;
