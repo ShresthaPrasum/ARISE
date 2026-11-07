@@ -167,6 +167,16 @@ public class SkeletonSummoner : MonoBehaviour
         {
             ClearAllDummies();
         }
+
+        if(Keyboard.current != null && Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            RemoveLastDummy();
+        }
+
+        if(Keyboard.current!= null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            // Imma add menu logic here later
+        }
     }
 
     private void SummonSkeleton()
@@ -182,6 +192,16 @@ public class SkeletonSummoner : MonoBehaviour
         dummiesRemaining--;
 
             playerAnimator.SetTrigger("summon");
+    }
+
+    public void RemoveLastDummy()
+    {
+        if (activeDummies.Count > 0)
+        {
+            GameObject lastDummy = activeDummies[activeDummies.Count - 1];
+            activeDummies.RemoveAt(activeDummies.Count - 1);
+            Destroy(lastDummy);
+        }
     }
 
     public void ClearAllDummies()
@@ -210,9 +230,8 @@ public class SkeletonSummoner : MonoBehaviour
             cursorCooldownBar.color = barColor;
         }
 
-        if (dummyCountText != null)
-        {
-            dummyCountText.text = "DUMMIES: " + dummiesRemaining + " / " + maxDummies;
-        }
+
+            // dummyCountText.text = "DUMMIES: " + dummiesRemaining + " / " + maxDummies;
+        
     }
 }
