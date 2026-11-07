@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
@@ -173,6 +174,10 @@ public class SkeletonSummoner : MonoBehaviour
             RemoveLastDummy();
         }
 
+        if(Keyboard.current != null && Keyboard.current.tKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         if(Keyboard.current!= null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             // Imma add menu logic here later

@@ -11,11 +11,12 @@ public class Door: MonoBehaviour
         if(other.CompareTag("Player"))
         {
             doorAnimator.SetTrigger("Open");
+            
             var grandFather = other.transform.parent.parent;
 
             other.transform.parent.SetParent(this.transform);
 
-            other.transform.parent.localPosition = new Vector3(-4.09f, -2.6f, -2f);
+            other.transform.parent.localPosition = new Vector3(-5.24f, -2.35f, 1f);
 
             grandFather.GetComponent<PlayerMovement>().animator.enabled = false;
             Invoke("LoadScene", 1f);
