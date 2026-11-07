@@ -13,12 +13,10 @@ public class Door: MonoBehaviour
         if(other.CompareTag("Player"))
         {
             doorAnimator.SetTrigger("Open");
-            
-            var grandFather = other.transform.parent.parent;
 
-            other.transform.parent.SetParent(this.transform);
+            other.transform.GetChild(0).SetParent(this.transform);
 
-            other.transform.parent.localPosition = new Vector3(-5.24f, -2.35f, -2f);
+            other.transform.GetChild(0).localPosition = Vector3.zero;
 
             playerAnimator.SetTrigger("finalExit");
 

@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float horizontalInput;
     private bool isGrounded;
-    // private bool facingRight = true;
+    private bool facingRight = true;
     public bool isDead = false;
     private Vector3 respawnPoint;
 
@@ -82,6 +82,21 @@ public class PlayerMovement : MonoBehaviour
                     rb.linearVelocityY *= jumpCutMultiplier;
                 }
             }
+        }
+
+        if(horizontalInput > 0f && !facingRight)
+        {
+            facingRight = true;
+            Vector3 currentScale = transform.localScale;
+            currentScale.x = Mathf.Abs(currentScale.x);
+            transform.localScale = currentScale;
+        }
+        else if(horizontalInput < 0f && facingRight)
+        {
+            facingRight = false;
+            Vector3 currentScale = transform.localScale;
+            currentScale.x = -Mathf.Abs(currentScale.x);
+            transform.localScale = currentScale;
         }
 
         

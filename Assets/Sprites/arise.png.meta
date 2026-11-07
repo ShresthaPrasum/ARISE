@@ -1,0 +1,678 @@
+fileFormatVersion: 2
+guid: fa34ee44232d483409d46929a52a36a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1221931321004362750
+    second: arise_0
+  - first:
+      213: -2611058560413874172
+    second: arise_1
+  - first:
+      213: -1609635124073647217
+    second: arise_2
+  - first:
+      213: 4642267840370120313
+    second: arise_3
+  - first:
+      213: 3805429140710823936
+    second: arise_4
+  - first:
+      213: 3826189292605128316
+    second: arise_5
+  - first:
+      213: 3865091536729847208
+    second: arise_6
+  - first:
+      213: -6531586433369902413
+    second: arise_7
+  - first:
+      213: 4453734662217807571
+    second: arise_8
+  - first:
+      213: 5586465226320508978
+    second: arise_9
+  - first:
+      213: -472356055474725766
+    second: arise_10
+  - first:
+      213: 7467196739393537044
+    second: arise_11
+  - first:
+      213: -3221080603887850978
+    second: arise_12
+  - first:
+      213: 4620884596182055373
+    second: arise_13
+  - first:
+      213: -1600098292059378351
+    second: arise_14
+  - first:
+      213: -2226095951438700057
+    second: arise_15
+  - first:
+      213: 4639649311716070853
+    second: arise_16
+  - first:
+      213: 6558728280126533050
+    second: arise_17
+  - first:
+      213: -5358610096562444848
+    second: arise_18
+  - first:
+      213: 8291296583876906211
+    second: arise_19
+  - first:
+      213: -9119425712838625129
+    second: arise_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: arise_0
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1077
+        width: 367
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2047c9700f3da0fe0800000000000000
+      internalID: -1221931321004362750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_1
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1077
+        width: 387
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 408c9c2c218a3cbd0800000000000000
+      internalID: -2611058560413874172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_2
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1077
+        width: 397
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f833993026d69a9e0800000000000000
+      internalID: -1609635124073647217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_3
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1001
+        width: 372
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9761b794106ac6040800000000000000
+      internalID: 4642267840370120313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_4
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 1077
+        width: 382
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0081df534a99fc430800000000000000
+      internalID: 3805429140710823936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_5
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 1077
+        width: 382
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7eb12db3ea591530800000000000000
+      internalID: 3826189292605128316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_6
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 204
+        width: 414
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5b627464093a530800000000000000
+      internalID: 3865091536729847208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_7
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 640
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2f933aeb42b55a0800000000000000
+      internalID: -6531586433369902413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_8
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 570
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d636511418decd30800000000000000
+      internalID: 4453734662217807571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_9
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 547
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 238f7e4668c178d40800000000000000
+      internalID: 5586465226320508978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_10
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 512
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c9ce19baad179f0800000000000000
+      internalID: -472356055474725766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_11
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 504
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 414c18f1fdfc0a760800000000000000
+      internalID: 7467196739393537044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_12
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 491
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a2d5cb14c6c43d0800000000000000
+      internalID: -3221080603887850978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_13
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 508
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc97187ce0ea02040800000000000000
+      internalID: 4620884596182055373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_14
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 501
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d6710c41f4bc9e0800000000000000
+      internalID: -1600098292059378351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_15
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 206
+        width: 377
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1af8ac6815b11e0800000000000000
+      internalID: -2226095951438700057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_16
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 209
+        width: 377
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5d8339778536040800000000000000
+      internalID: 4639649311716070853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_17
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 209
+        width: 372
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd20430f98450b50800000000000000
+      internalID: 6558728280126533050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_18
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 438
+        width: 30
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5e290228462a5b0800000000000000
+      internalID: -5358610096562444848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 209
+        width: 372
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec8469505a901370800000000000000
+      internalID: 8291296583876906211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arise_20
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 209
+        width: 377
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 798b0b681aa417180800000000000000
+      internalID: -9119425712838625129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      arise_0: -1221931321004362750
+      arise_1: -2611058560413874172
+      arise_10: -472356055474725766
+      arise_11: 7467196739393537044
+      arise_12: -3221080603887850978
+      arise_13: 4620884596182055373
+      arise_14: -1600098292059378351
+      arise_15: -2226095951438700057
+      arise_16: 4639649311716070853
+      arise_17: 6558728280126533050
+      arise_18: -5358610096562444848
+      arise_19: 8291296583876906211
+      arise_2: -1609635124073647217
+      arise_20: -9119425712838625129
+      arise_3: 4642267840370120313
+      arise_4: 3805429140710823936
+      arise_5: 3826189292605128316
+      arise_6: 3865091536729847208
+      arise_7: -6531586433369902413
+      arise_8: 4453734662217807571
+      arise_9: 5586465226320508978
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
