@@ -34,10 +34,6 @@ public class SkeletonSummoner : MonoBehaviour
     
     public Color invalidColor = new Color(0.3f, 0.3f, 0.3f, 0.7f);
 
-    public LineRenderer rangeLine;
-
-    public int circleSegments = 50;
-
     public Animator playerAnimator;
 
     private List<GameObject> activeDummies = new List<GameObject>();
@@ -56,6 +52,8 @@ public class SkeletonSummoner : MonoBehaviour
 
     public List<Image> dummyIcons = new List<Image>();
 
+    public Menu PauseMenu;
+
 
     private void Start()
     {
@@ -63,28 +61,14 @@ public class SkeletonSummoner : MonoBehaviour
         player = GetComponent<PlayerMovement>();
 
         dummiesRemaining = maxDummies;
-        SetupRangeCircle();
     }
 
-    private void SetupRangeCircle()
-    {
-        rangeLine.useWorldSpace = false;
-        rangeLine.positionCount = circleSegments + 1;
-
-        float angle = 0f;
-        for (int i = 0; i < (circleSegments + 1); i++)
-        {
-            float x = Mathf.Cos(Mathf.Deg2Rad * angle) * summonRange;
-            float y = Mathf.Sin(Mathf.Deg2Rad * angle) * summonRange;
-            rangeLine.SetPosition(i, new Vector3(x, y, 0f));
-            angle += 360f / circleSegments;
-        }
-    }
 
     private void Update()
     {
         if (player != null && player.isDead) return;
 
+        if (PauseMenu.GameIsPaused) return;
         
         if (cooldownTimer > 0f)
         {
@@ -177,10 +161,6 @@ public class SkeletonSummoner : MonoBehaviour
         if(Keyboard.current != null && Keyboard.current.tKey.wasPressedThisFrame)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        if(Keyboard.current!= null && Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            // Imma add menu logic here later
         }
     }
 

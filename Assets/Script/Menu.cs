@@ -1,16 +1,74 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject pauseMenuUI;
+
+    public string homeSceneName ="Home";
+
+    public bool GameIsPaused = false;
+
+
+    private void Start()
     {
-        
+        pauseMenuUI.SetActive(false);
+
+        Time.timeScale = 1f;
+        GameIsPaused = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+
+            else
+            {
+                Pause();
+            }
+        }
     }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+
+        Time.timeScale = 1f;
+
+        GameIsPaused=  false;
+    }
+
+    private void Pause()
+    {
+       pauseMenuUI.SetActive(true);
+
+       Time.timeScale = 0f;
+
+       GameIsPaused = true; 
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f;
+
+        GameIsPaused = false;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LoadHome()
+    {
+        Time.timeScale =1f;
+
+        GameIsPaused = false;
+
+        SceneManager.LoadScene(homeSceneName);
+    }
+
 }

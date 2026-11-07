@@ -6,6 +6,8 @@ public class Door: MonoBehaviour
     public string sceneToLoad;
 
     public Animator doorAnimator;
+
+    public Animator playerAnimator;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
@@ -16,9 +18,10 @@ public class Door: MonoBehaviour
 
             other.transform.parent.SetParent(this.transform);
 
-            other.transform.parent.localPosition = new Vector3(-5.24f, -2.35f, 1f);
+            other.transform.parent.localPosition = new Vector3(-5.24f, -2.35f, -2f);
 
-            grandFather.GetComponent<PlayerMovement>().animator.enabled = false;
+            playerAnimator.SetTrigger("finalExit");
+
             Invoke("LoadScene", 1f);
         }
     }

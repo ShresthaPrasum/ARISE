@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     // private bool facingRight = true;
     public bool isDead = false;
     private Vector3 respawnPoint;
+    
+    public Menu PauseMenu; // Reference to the Menu script
 
     private void Start()
     {
@@ -34,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (isDead) return;
+
+        if(PauseMenu.GameIsPaused) return;
 
         
         bool wasGrounded = isGrounded;
