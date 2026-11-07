@@ -1,45 +1,72 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using TMPro;
 
 public class SkeletonSummoner : MonoBehaviour
 {
     public GameObject skeletonPrefab;
+
+    public int maxDummies = 3;
+
     public float summonRange = 5f;
+
     public float summonCooldown = 2f; 
+
     public LayerMask groundLayer;
+
     public Vector2 checkBoxSize = new Vector2(0.8f, 1.4f);
+
     public AudioSource audioSource;
+
     public AudioClip ariseSound;
 
 
     public Transform indicator;
     public SpriteRenderer indicatorRenderer;
+
+    public Image cursorCooldownBar;
+
+    public TMP_Text dummyCountText;
     public Color validColor = Color.white;
+    
     public Color invalidColor = new Color(0.3f, 0.3f, 0.3f, 0.7f);
 
     public LineRenderer rangeLine;
+
     public int circleSegments = 50;
 
     public Animator playerAnimator;
 
-    private SkeletonServant currentSkeleton;
+    private List<GameObject> activeDummies = new List<GameObject>();
+
     private Vector2 spawnPosition;
+
     private bool canSummonHere;
+
     private Camera mainCam;
+
     private PlayerMovement player;
-    
-    private float cooldownTimer = 0f; 
+
+    private float cooldownTimer = 0f;
+
+    private int dummiesRemaining;
+
+    public List<Image> dummyIcons = new List<Image>();
+
 
     private void Start()
     {
         mainCam = Camera.main;
         player = GetComponent<PlayerMovement>();
+
+        dummiesRemaining = maxDummies;
         SetupRangeCircle();
     }
 
     private void SetupRangeCircle()
     {
-        if (rangeLine == null) return;
         rangeLine.useWorldSpace = false;
         rangeLine.positionCount = circleSegments + 1;
 
@@ -49,7 +76,7 @@ public class SkeletonSummoner : MonoBehaviour
             float x = Mathf.Cos(Mathf.Deg2Rad * angle) * summonRange;
             float y = Mathf.Sin(Mathf.Deg2Rad * angle) * summonRange;
             rangeLine.SetPosition(i, new Vector3(x, y, 0f));
-            angle += (360f / circleSegments);
+            angle += 360f / circleSegments;
         }
     }
 
@@ -65,6 +92,8 @@ public class SkeletonSummoner : MonoBehaviour
 
         CheckMousePosition();
         HandleInput();
+
+        UpdateCursorUI();   
     }
 
     private void CheckMousePosition()
@@ -100,62 +129,90 @@ public class SkeletonSummoner : MonoBehaviour
 
     private void UpdateIndicator(Vector2 position, bool isValid)
     {
-        if (indicator == null) return;
-        
+
         indicator.position = position;
         indicator.localScale = checkBoxSize * 0.9f;
-        
-        if (indicatorRenderer != null) 
-        {
-            
-            if (cooldownTimer > 0f)
+
+
+            bool readyToSpawn = (cooldownTimer <= 0f) && (dummiesRemaining > 0);
+
+    
+            for (int i = 0; i < dummyIcons.Count; i++)
             {
-                indicatorRenderer.color = invalidColor;
+                Color tempColor = Color.white;
+                
+                tempColor.a = 97f/255f;
+  
+                dummyIcons[i].color = (i < dummiesRemaining) ? Color.white : tempColor;   
             }
-            else
-            {
-                indicatorRenderer.color = isValid ? validColor : invalidColor;
-            }
-        }
+
+            indicatorRenderer.color = 
+            (isValid && readyToSpawn) ? validColor : invalidColor;
+    
     }
 
     private void HandleInput()
     {
         
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && canSummonHere && cooldownTimer <= 0f)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
-            SummonSkeleton();
-            cooldownTimer = summonCooldown; 
+            if (canSummonHere && cooldownTimer <= 0f && dummiesRemaining > 0)
+            {
+                SummonSkeleton();
+                cooldownTimer = summonCooldown;
+            }
         }
 
         if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
         {
-            DismissSkeleton();
+            ClearAllDummies();
         }
     }
 
     private void SummonSkeleton()
     {
-        if (currentSkeleton != null) Destroy(currentSkeleton.gameObject);
-
-        
         if (audioSource != null && ariseSound != null)
         {
             audioSource.PlayOneShot(ariseSound);
         }
 
-        GameObject newObj = Instantiate(skeletonPrefab, spawnPosition, Quaternion.identity);
-        currentSkeleton = newObj.GetComponent<SkeletonServant>();
+        GameObject newDummy = Instantiate(skeletonPrefab, spawnPosition, Quaternion.identity);
+        activeDummies.Add(newDummy);
 
-        playerAnimator.SetTrigger("Arise");
+        dummiesRemaining--;
+
+            playerAnimator.SetTrigger("summon");
     }
 
-    public void DismissSkeleton()
+    public void ClearAllDummies()
     {
-        if (currentSkeleton != null)
+        for (int i = 0; i < activeDummies.Count; i++)
         {
-            Destroy(currentSkeleton.gameObject);
-            currentSkeleton = null;
+            Destroy(activeDummies[i]);
+        }
+        activeDummies.Clear();
+
+    }
+
+    private void UpdateCursorUI()
+    {
+        if (cursorCooldownBar != null)
+        {
+            float fillAmount = 1f;
+            if (summonCooldown > 0f)
+            {
+                fillAmount = 1f - (cooldownTimer / summonCooldown);
+            }
+            cursorCooldownBar.fillAmount = fillAmount;
+
+            Color barColor = cursorCooldownBar.color;
+            barColor.a = (fillAmount >= 1f) ? 0f : 1f;
+            cursorCooldownBar.color = barColor;
+        }
+
+        if (dummyCountText != null)
+        {
+            dummyCountText.text = "DUMMIES: " + dummiesRemaining + " / " + maxDummies;
         }
     }
 }
