@@ -1925,6 +1925,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870157298}
   m_CullTransparentMesh: 1
+--- !u!1 &871490058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8755003412855687289, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+  m_PrefabInstance: {fileID: 3579343327335697913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &936189074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,7 +3733,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Door
   sceneToLoad: 3
   doorAnimator: {fileID: 1337540146}
+  playerSprite: {fileID: 871490058}
   playerAnimator: {fileID: 2553573267617197338}
+  playerPositionInDoor: {x: 0, y: 0, z: 0}
 --- !u!1 &1337757857
 GameObject:
   m_ObjectHideFlags: 0

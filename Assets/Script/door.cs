@@ -7,16 +7,21 @@ public class Door: MonoBehaviour
 
     public Animator doorAnimator;
 
+    public GameObject playerSprite;
+
     public Animator playerAnimator;
+
+    public Vector3 playerPositionInDoor;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
             doorAnimator.SetTrigger("Open");
 
-            other.transform.GetChild(0).SetParent(this.transform);
 
-            other.transform.GetChild(0).localPosition = Vector3.zero;
+            playerSprite.transform.SetParent(this.transform);
+
+            playerSprite.transform.localPosition = playerPositionInDoor;
 
             playerAnimator.SetTrigger("finalExit");
 
