@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     private Vector3 respawnPoint;
 
+    public float respawnDelay = 1.5f;
+
     public AudioSource audioSource;
 
     public AudioClip walkSound;
@@ -178,9 +180,9 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         
         if (animator != null) 
-            animator.SetTrigger("die");
+            animator.SetTrigger("finalExit");
             
-        Invoke(nameof(Respawn), 1f);
+        Invoke(nameof(Respawn), respawnDelay);
     }
 
     public void Respawn()

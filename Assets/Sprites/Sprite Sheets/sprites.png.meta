@@ -299,10 +299,10 @@ TextureImporter:
       name: sprites_4
       rect:
         serializedVersion: 2
-        x: 526
-        y: 667
-        width: 200
-        height: 112
+        x: 527
+        y: 670
+        width: 196
+        height: 109
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 65, y: 24, z: 67, w: 3}

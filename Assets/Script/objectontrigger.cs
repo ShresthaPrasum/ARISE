@@ -22,7 +22,7 @@ public class ObjectOnTrigger : MonoBehaviour
 
     [Header("What to do when touched")]
 
-    public string[] allowedTags = {"Player", "Skeleton"};
+    public string[] allowedTags = {"Player", "Troops"};
 
     public bool checkParents;
 
@@ -182,7 +182,7 @@ public class ObjectOnTrigger : MonoBehaviour
     
     private void PlaySound()
     {
-        if (!soundPlayed)
+        if (!soundPlayed && audioSrc != null && soundEffect != null)
         {
             audioSrc.PlayOneShot(soundEffect);
             soundPlayed = true;
@@ -229,7 +229,7 @@ public class ObjectOnTrigger : MonoBehaviour
         {
             delayRoutine = StartCoroutine(DoActionAfterDelay());
         }
-        
+
         else
         {
             DoAction();

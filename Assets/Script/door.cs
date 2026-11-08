@@ -11,6 +11,8 @@ public class Door: MonoBehaviour
 
     public Animator playerAnimator;
 
+    public float delayBeforeLoad = 1f;
+
     public Vector3 playerPositionInDoor;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,7 +27,7 @@ public class Door: MonoBehaviour
 
             playerAnimator.SetTrigger("finalExit");
 
-            Invoke("LoadScene", 1f);
+            Invoke("LoadScene", delayBeforeLoad);
         }
     }
 
