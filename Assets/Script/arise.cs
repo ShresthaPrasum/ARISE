@@ -141,7 +141,6 @@ public class SkeletonSummoner : MonoBehaviour
         activeDummies.Add(newDummy);
         dummiesRemaining--;
 
-        playerAnimator.SetTrigger("summon");
     }
 
     public void RemoveLastDummy()

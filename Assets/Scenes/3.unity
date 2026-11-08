@@ -849,6 +849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5ed75293e7e9e449d10535a479febf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Killer
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!61 &567151959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -885,9 +887,9 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.77, y: 0.22999999, z: 0.83, w: 0.03}
+    border: {x: 0.68, y: 0.24, z: 0.69, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3, y: 1.12}
+    oldSize: {x: 2.07, y: 1.13}
     newSize: {x: 5.6455927, y: 1.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
@@ -1157,6 +1159,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1334803356052279415, guid: ba6a17552894d1645a6f6c0c77e9f0fc, type: 3}
+      propertyPath: m_text
+      value: Level 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1537138891398883063, guid: ba6a17552894d1645a6f6c0c77e9f0fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1519,6 +1525,7 @@ MonoBehaviour:
   doorAnimator: {fileID: 1337540146}
   playerSprite: {fileID: 1580912003}
   playerAnimator: {fileID: 2553573267617197338}
+  delayBeforeLoad: 1
   playerPositionInDoor: {x: 0, y: -2.45, z: 0}
 --- !u!114 &1402809772 stripped
 MonoBehaviour:
