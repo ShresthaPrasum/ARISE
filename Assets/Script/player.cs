@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioClip walkSound;
 
+    public AudioClip landingSound;
+
+    public AudioClip jumpSound;
+
     
     public Menu PauseMenu; // Reference to the Menu script
 
@@ -131,10 +135,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocityY = jumpForce;
 
-        if (animator != null)
-        {
             animator.SetTrigger("takeOff"); 
-        }
+
+            audioSource.PlayOneShot(jumpSound);
     }
 
     private void UpdateAnimations(bool wasGrounded)
@@ -146,6 +149,8 @@ public class PlayerMovement : MonoBehaviour
         if (!wasGrounded && isGrounded)
         {
             animator.ResetTrigger("takeOff"); 
+
+            audioSource.PlayOneShot(landingSound);
         }
 
         animator.SetBool("isRunning", Mathf.Abs(horizontalInput) > 0.01f);
