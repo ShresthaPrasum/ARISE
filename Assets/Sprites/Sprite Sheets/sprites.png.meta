@@ -299,13 +299,13 @@ TextureImporter:
       name: sprites_4
       rect:
         serializedVersion: 2
-        x: 513
+        x: 519
         y: 667
-        width: 230
+        width: 216
         height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 77, y: 23, z: 83, w: 3}
+      border: {x: 71, y: 23, z: 76, w: 3}
       customData: 
       outline: []
       physicsShape: []

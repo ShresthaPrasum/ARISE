@@ -15062,9 +15062,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1069827656}
     - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e170bbeea003d18469369fa430a1e8af, type: 3}
+    - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: walkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a4353d93443dc54bb0ccea29efc2fbd, type: 3}
+    - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 2123160438}
+    - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: landingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 003862d2c29fb444d9a70e34dbc881f5, type: 3}
     - target: {fileID: 4123803003769040247, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: m_Camera
       value: 
