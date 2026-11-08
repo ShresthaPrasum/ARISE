@@ -22,32 +22,49 @@ public class ObjectOnTrigger : MonoBehaviour
 
     [Header("What to do when touched")]
 
+    public string[] allowedTags = {"Player", "Skeleton"};
+
+    public bool checkParents;
+
     public ActionType action = ActionType.Move;
+
+    public AudioClip soundEffect;
+
+    public float delay = 0f;
 
     public Transform targetToMove;
 
     public Vector3 moveOffset;
 
     public float moveSpeed = 3f;
-    
+
     public bool localSpace = false;
-    
+
     public bool moveOnlyOnce = false;
-    
-    public bool pingPong = false;
-    
 
 
-    public Vector3 scaleOffset = Vector3.one;
-    
+    public bool pingPong =false;
+
+    public bool loopAfterTouch = false;
+
+    public GameObject targetToToggle;
+
+    public ToggleStyle toggleStyle = ToggleStyle.ForceState;
+
+    public bool turnOn = true;
+
+    public Vector3 scaleOffset =Vector3.one;
+
     public float scaleSpeed = 3f;
-    
-    public bool scaleOnlyOnce = false;
-    
 
+    public bool scaleOnlyOnce =false;
 
+    public bool resetOnExit = false;
+
+    public AudioSource audioSrc;
 
     private Transform actualTarget;
+
 
     private Vector3 startPos;
 
@@ -59,11 +76,9 @@ public class ObjectOnTrigger : MonoBehaviour
 
     private Vector3 finalScale;
 
-
-
     private bool isMoving;
 
-    private bool movingToEnd = true;
+    private bool movingToEnd =true;
 
     private bool hasTriggered;
 
@@ -71,7 +86,9 @@ public class ObjectOnTrigger : MonoBehaviour
 
     private bool isScaling;
 
+    private bool soundPlayed = false;
 
+    private Coroutine delayRoutine;
 
 
 
@@ -138,5 +155,157 @@ public class ObjectOnTrigger : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (CheckTag(other.gameObject))
+        {
+            RunTrigger();
+            PlaySound();
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (CheckTag(other.gameObject))
+        {
+            RunTrigger();
+            PlaySound();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (resetOnExit && CheckTag(other.gameObject) && !isLooping)
+        {
+            ResetTrigger();
+        }
+    }
+    
+    private void PlaySound()
+    {
+        if (!soundPlayed)
+        {
+            audioSrc.PlayOneShot(soundEffect);
+            soundPlayed = true;
+        }
+    }
+
+    private bool CheckTag(GameObject obj)
+    {
+        // Checks if the object's tag is in the allowedTags array, I want to make it dummy tag allowed too;
+        foreach(string t in allowedTags)
+        {
+            if(obj.CompareTag(t))
+            {
+                return true;
+            }
+        }
+
+        if (checkParents)
+        {
+            
+            Transform curr = obj.transform.parent;
+
+            while(curr != null){
+                
+                foreach(string t in allowedTags)
+                {
+                    if(curr.CompareTag(t))
+                    {
+                        return true;
+                    }
+                }
+
+                curr = curr.parent;
+            }
+        }
+
+        return false;
+    }
+
+
+    private void RunTrigger()
+    {
+        if (delay > 0)
+        {
+            delayRoutine = StartCoroutine(DoActionAfterDelay());
+        }
+        
+        else
+        {
+            DoAction();
+        }
+    }
+
+    private IEnumerator DoActionAfterDelay()
+    {
+        yield return new WaitForSeconds(delay);
+
+        DoAction();
+
+        delayRoutine = null;
+    }
+
+    private void DoAction()
+    {
+        if (action == ActionType.Move)
+        {
+            if (moveOnlyOnce && hasTriggered) return;
+
+            if (loopAfterTouch)
+            {
+                isLooping = true;
+            }
+            
+            currentTargetPos = endPos;
+            movingToEnd = true;
+            isMoving = true;
+        }
+        else if (action == ActionType.Scale)
+        {
+            if (scaleOnlyOnce && hasTriggered) return;
+            isScaling = true;
+        }
+        else if (action == ActionType.Toggle && targetToToggle != null)
+        {
+            if (toggleStyle == ToggleStyle.Flip)
+            {
+                targetToToggle.SetActive(!targetToToggle.activeSelf);
+            }
+            else
+            {
+                targetToToggle.SetActive(turnOn);
+            }
+        }
+    }
+
+
+    private void ResetTrigger()
+    {
+        StopCoroutine(delayRoutine);
+
+        delayRoutine = null;
+
+        if(action == ActionType.Move)
+        {
+            actualTarget.position = startPos;
+
+            currentTargetPos = endPos;
+
+            movingToEnd =true;
+
+            isMoving = false;
+
+            hasTriggered = false;
+        }
+
+        else if(action == ActionType.Scale)
+        {
+            actualTarget.localScale = initialScale;
+
+            isScaling = false;
+
+            hasTriggered = false;
+        }
+    }
 
 }
