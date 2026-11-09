@@ -5,6 +5,14 @@ public class Killer : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip deathSound;
 
+    public void Start()
+    {
+        if(audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player")){
