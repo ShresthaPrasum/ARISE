@@ -2342,6 +2342,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 767503118628233490, guid: df9e770e20d9b3740a087ed3619b2902, type: 3}
+      propertyPath: sceneToLoad
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 767503118628233490, guid: df9e770e20d9b3740a087ed3619b2902, type: 3}
       propertyPath: playerSprite
       value: 
       objectReference: {fileID: 871490058}

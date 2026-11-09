@@ -14,6 +14,22 @@ public class Door: MonoBehaviour
     public float delayBeforeLoad = 1f;
 
     public Vector3 playerPositionInDoor;
+
+    public AudioSource audioSource;
+
+    public AudioClip doorCloseSound;
+
+    public AudioClip doorOpenSound;
+
+    public void Start()
+    {
+        if(audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
@@ -27,6 +43,8 @@ public class Door: MonoBehaviour
 
             playerAnimator.SetTrigger("finalExit");
 
+            audioSource.PlayOneShot(doorOpenSound);
+
             Invoke("LoadScene", delayBeforeLoad);
         }
     }
@@ -34,5 +52,16 @@ public class Door: MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene(sceneToLoad);
+    }
+
+    public void PlayDoorCloseSound()
+    {
+            audioSource.PlayOneShot(doorCloseSound);
+    
+    }
+    public void PlayDoorOpenSound()
+    {
+            audioSource.PlayOneShot(doorOpenSound);
+    
     }
 }

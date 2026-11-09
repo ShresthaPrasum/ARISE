@@ -227,7 +227,10 @@ MonoBehaviour:
   doorAnimator: {fileID: 1087487948622739581}
   playerSprite: {fileID: 0}
   playerAnimator: {fileID: 0}
+  delayBeforeLoad: 1
   playerPositionInDoor: {x: 0, y: -2.45, z: 0}
+  audioSource: {fileID: 0}
+  doorOpenSound: {fileID: 8300000, guid: a4db9811c7a375f4faa63e47a4a4975c, type: 3}
 --- !u!61 &3366372136405695204
 BoxCollider2D:
   m_ObjectHideFlags: 0

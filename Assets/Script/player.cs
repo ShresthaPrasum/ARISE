@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float respawnDelay = 1.5f;
 
+    public Color deadColor = Color.red;
+
     public AudioSource audioSource;
 
     public AudioClip walkSound;
@@ -159,13 +161,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isGrounded", isGrounded);
     }
 
-    // private void Flip()
-    // {
-    //     facingRight = !facingRight;
-    //     Vector3 currentScale = transform.localScale;
-    //     currentScale.x *= -1f;
-    //     transform.localScale = currentScale;
-    // }
 
     public void setCheckpoint(Vector3 newPoint)
     {
@@ -178,6 +173,12 @@ public class PlayerMovement : MonoBehaviour
         
         isDead = true;
         rb.linearVelocity = Vector2.zero;
+
+        SpriteRenderer[] allSprites = GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer sprite in allSprites)
+        {
+            sprite.color = deadColor;
+        }
         
         if (animator != null) 
             animator.SetTrigger("finalExit");
@@ -188,7 +189,15 @@ public class PlayerMovement : MonoBehaviour
     public void Respawn()
     {
         transform.position = respawnPoint;
+
         rb.linearVelocity = Vector2.zero;
+
+        SpriteRenderer[] allSprites = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (SpriteRenderer sprite in allSprites)
+        {
+            sprite.color = Color.white;
+        }
         isDead = false;
     }
 
