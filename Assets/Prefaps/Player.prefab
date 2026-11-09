@@ -267,8 +267,8 @@ MonoBehaviour:
   moveSpeed: 10.5
   jumpForce: 14.5
   jumpCutMultiplier: 0.69
-  normalGravity: 2
-  droppingGravity: 6.9
+  normalGravity: 2.5
+  droppingGravity: 9
   groundCheck: {fileID: 5020955850756275911}
   checkSize: {x: 0.86, y: 0.93}
   groundLayer:
@@ -276,8 +276,12 @@ MonoBehaviour:
     m_Bits: 192
   animator: {fileID: 8056723410444529025}
   isDead: 0
+  respawnDelay: 1.5
+  deadColor: {r: 1, g: 0, b: 0, a: 1}
   audioSource: {fileID: 5955380695362191889}
   walkSound: {fileID: 8300000, guid: 003862d2c29fb444d9a70e34dbc881f5, type: 3}
+  landingSound: {fileID: 0}
+  jumpSound: {fileID: 0}
   PauseMenu: {fileID: 0}
 --- !u!114 &7102662961416938832
 MonoBehaviour:

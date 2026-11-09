@@ -1017,7 +1017,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 767503118628233490, guid: df9e770e20d9b3740a087ed3619b2902, type: 3}
       propertyPath: sceneToLoad
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 767503118628233490, guid: df9e770e20d9b3740a087ed3619b2902, type: 3}
       propertyPath: playerSprite
@@ -1097,7 +1097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &845043318
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1114,7 +1114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -945.19, y: -528.35956}
+  m_AnchoredPosition: {x: -952.09, y: -540.43}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0.93}
 --- !u!114 &845043319
@@ -1137,9 +1137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'TouchMe
-
-'
+  m_text: NoSpawn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e0dbdc42054cff498e877cdf05c1a5e, type: 2}
   m_sharedMaterial: {fileID: -8481130206684480928, guid: 7e0dbdc42054cff498e877cdf05c1a5e, type: 2}
@@ -1148,8 +1146,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1635,7 +1633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1499005408
 SpriteRenderer:
   serializedVersion: 3
@@ -2714,7 +2712,7 @@ GameObject:
   - component: {fileID: 1558531830}
   - component: {fileID: 1558531829}
   - component: {fileID: 1558531828}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Tilemap (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3115,7 +3113,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.10980393, g: 0.23529413, b: 0.31764707, a: 1}
+  m_Color: {r: 0.08627451, g: 0.13394538, b: 0.22352941, a: 1}
   m_Origin: {x: -18, y: -11, z: 0}
   m_Size: {x: 73, y: 27, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -14407,6 +14405,18 @@ PrefabInstance:
       propertyPath: landingSound
       value: 
       objectReference: {fileID: 8300000, guid: 003862d2c29fb444d9a70e34dbc881f5, type: 3}
+    - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: normalGravity
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: droppingGravity
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 448
+      objectReference: {fileID: 0}
     - target: {fileID: 5034910567006950285, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: m_Name
       value: Player
@@ -14586,8 +14596,8 @@ MonoBehaviour:
   delay: 0
   targetToMove: {fileID: 1510997915}
   moveOffset: {x: 0, y: 10.2, z: 0}
-  moveSpeed: 3
-  localSpace: 0
+  moveSpeed: 5.5
+  localSpace: 1
   moveOnlyOnce: 1
   pingPong: 0
   loopAfterTouch: 0
