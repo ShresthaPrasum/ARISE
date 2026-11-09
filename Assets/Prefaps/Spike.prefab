@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8624572581910990567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.04, y: -12.11, z: 0}
+  m_LocalPosition: {x: 15.04, y: -12.5197, z: 0}
   m_LocalScale: {x: 3.3801715, y: 2.7942, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 5.789102, y: 1.12}
+  m_Size: {x: 5.789102, y: 0.8267722}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,6 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5ed75293e7e9e449d10535a479febf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Killer
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!61 &5150854805086700672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,10 +144,10 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.77, y: 0.22999999, z: 0.83, w: 0.03}
+    border: {x: 0.02, y: 0, z: 0.01, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3, y: 1.12}
-    newSize: {x: 5.789102, y: 1.12}
+    oldSize: {x: 1.89, y: 0.84}
+    newSize: {x: 5.789102, y: 0.8267722}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0

@@ -96,14 +96,6 @@ public class ObjectOnTrigger : MonoBehaviour
     {
         actualTarget = targetToMove != null ? targetToMove  :transform;
 
-        startPos = actualTarget.position;
-
-        Vector3 offset = localSpace ? actualTarget.TransformVector(moveOffset) : moveOffset;
-
-        endPos = startPos + offset;
-
-        currentTargetPos = endPos;
-
         initialScale = actualTarget.localScale;
 
         finalScale = initialScale + scaleOffset;
@@ -250,6 +242,13 @@ public class ObjectOnTrigger : MonoBehaviour
         if (action == ActionType.Move)
         {
             if (moveOnlyOnce && hasTriggered) return;
+
+            if (!isMoving)
+            {
+                startPos = actualTarget.position;
+                Vector3 offset = localSpace ? actualTarget.TransformVector(moveOffset) : moveOffset;
+                endPos = startPos + offset;
+            }
 
             if (loopAfterTouch)
             {
