@@ -13,6 +13,10 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+        if (pauseMenuUI == null)
+        {
+            return;
+        }
         pauseMenuUI.SetActive(false);
 
         Time.timeScale = 1f;
@@ -21,7 +25,7 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
-        if(Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        if(Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame && pauseMenuUI != null)
         {
             if (GameIsPaused)
             {
@@ -32,6 +36,11 @@ public class Menu : MonoBehaviour
             {
                 Pause();
             }
+        }
+
+        else
+        {
+            return;
         }
     }
 

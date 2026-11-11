@@ -5,6 +5,8 @@ public class Door: MonoBehaviour
 {
     public string sceneToLoad;
 
+    private int currentLevelNumber;
+
     public Animator doorAnimator;
 
     public GameObject playerSprite;
@@ -21,6 +23,8 @@ public class Door: MonoBehaviour
 
     public void Start()
     {
+        currentLevelNumber = int.Parse(sceneToLoad) -1;
+        
         if(audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
@@ -32,6 +36,15 @@ public class Door: MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+
+            Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
+            
+            if (playerRb != null)
+            {
+                playerRb.linearVelocity = Vector2.zero;
+                playerRb.bodyType = RigidbodyType2D.Static;
+            }
+
             doorAnimator.SetTrigger("Open");
 
 
@@ -44,6 +57,15 @@ public class Door: MonoBehaviour
             audioSource.PlayOneShot(doorOpenSound);
 
             Invoke("LoadScene", delayBeforeLoad);
+
+            int currentUnlocked = PlayerPrefs.GetInt("UnlockedLevel", 1);
+
+    
+            if (currentLevelNumber >= currentUnlocked)
+            {
+                PlayerPrefs.SetInt("UnlockedLevel", currentLevelNumber + 1);
+                PlayerPrefs.Save(); 
+            }
         }
     }
 
