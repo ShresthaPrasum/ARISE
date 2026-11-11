@@ -15196,6 +15196,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530508108149109040, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 892507206275290751, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613328508514119239, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110082150783838209, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: PauseMenu
       value: 
@@ -15256,6 +15272,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6991400918966212929, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7102662961416938832, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: PauseMenu
       value: 
@@ -15288,6 +15308,10 @@ PrefabInstance:
       propertyPath: 'dummyIcons.Array.data[2]'
       value: 
       objectReference: {fileID: 1609218797}
+    - target: {fileID: 8525566927905692668, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

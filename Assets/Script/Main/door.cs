@@ -37,14 +37,6 @@ public class Door: MonoBehaviour
         if(other.CompareTag("Player"))
         {
 
-            Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
-            
-            if (playerRb != null)
-            {
-                playerRb.linearVelocity = Vector2.zero;
-                playerRb.bodyType = RigidbodyType2D.Static;
-            }
-
             doorAnimator.SetTrigger("Open");
 
 
