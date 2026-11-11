@@ -1814,7 +1814,7 @@ MonoBehaviour:
   - Player
   checkParents: 0
   action: 0
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 39c9f2ab067255641841b9889b55c38e, type: 3}
   delay: 0
   targetToMove: {fileID: 1558531827}
   moveOffset: {x: 0, y: 7.1, z: 0}

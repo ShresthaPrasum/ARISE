@@ -545,7 +545,7 @@ MonoBehaviour:
   - Player
   checkParents: 0
   action: 0
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 39c9f2ab067255641841b9889b55c38e, type: 3}
   delay: 0
   targetToMove: {fileID: 679515646}
   moveOffset: {x: 0, y: 15, z: 0}
@@ -797,7 +797,7 @@ MonoBehaviour:
   - Troops
   checkParents: 0
   action: 0
-  soundEffect: {fileID: 8300000, guid: 897e13cb7c6e5a44998e476e1f08fffa, type: 3}
+  soundEffect: {fileID: 8300000, guid: 39c9f2ab067255641841b9889b55c38e, type: 3}
   delay: 0
   targetToMove: {fileID: 1510997915}
   moveOffset: {x: 0, y: 31.35, z: 0}
@@ -3363,7 +3363,7 @@ MonoBehaviour:
   - Troops
   checkParents: 0
   action: 1
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 39c9f2ab067255641841b9889b55c38e, type: 3}
   delay: 0
   targetToMove: {fileID: 0}
   moveOffset: {x: 0, y: 0, z: 0}
@@ -3653,7 +3653,7 @@ MonoBehaviour:
   - Troops
   checkParents: 0
   action: 0
-  soundEffect: {fileID: 8300000, guid: 897e13cb7c6e5a44998e476e1f08fffa, type: 3}
+  soundEffect: {fileID: 8300000, guid: 39c9f2ab067255641841b9889b55c38e, type: 3}
   delay: 0
   targetToMove: {fileID: 1273250236}
   moveOffset: {x: 0, y: 19.8, z: 0}
@@ -5355,7 +5355,7 @@ MonoBehaviour:
   - Player
   checkParents: 0
   action: 0
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 39c9f2ab067255641841b9889b55c38e, type: 3}
   delay: 0
   targetToMove: {fileID: 1558531827}
   moveOffset: {x: 0, y: 6, z: 0}
@@ -22353,7 +22353,7 @@ MonoBehaviour:
   - Troops
   checkParents: 0
   action: 1
-  soundEffect: {fileID: 8300000, guid: 897e13cb7c6e5a44998e476e1f08fffa, type: 3}
+  soundEffect: {fileID: 8300000, guid: 39c9f2ab067255641841b9889b55c38e, type: 3}
   delay: 0
   targetToMove: {fileID: 899095824}
   moveOffset: {x: 0, y: 15, z: 0}

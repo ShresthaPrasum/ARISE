@@ -99,7 +99,10 @@ public class ObjectOnTrigger : MonoBehaviour
         initialScale = actualTarget.localScale;
 
         finalScale = initialScale + scaleOffset;
-
+        if(audioSrc == null)
+        {
+            audioSrc = gameObject.AddComponent<AudioSource>();
+        }
 
     }
 

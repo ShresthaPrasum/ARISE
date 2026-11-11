@@ -17,8 +17,6 @@ public class Door: MonoBehaviour
 
     public AudioSource audioSource;
 
-    public AudioClip doorCloseSound;
-
     public AudioClip doorOpenSound;
 
     public void Start()
@@ -54,11 +52,6 @@ public class Door: MonoBehaviour
         SceneManager.LoadScene(sceneToLoad);
     }
 
-    public void PlayDoorCloseSound()
-    {
-            audioSource.PlayOneShot(doorCloseSound);
-    
-    }
     public void PlayDoorOpenSound()
     {
             audioSource.PlayOneShot(doorOpenSound);

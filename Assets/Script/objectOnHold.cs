@@ -53,6 +53,10 @@ public class objectonHold : MonoBehaviour
 
     private void Start()
     {
+        if(soundPlayer == null)
+        {
+            soundPlayer = gameObject.AddComponent<AudioSource>();
+        }
         theTarget = moveTarget != null ? moveTarget : transform;
     }
 
