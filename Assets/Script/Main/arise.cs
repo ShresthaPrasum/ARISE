@@ -100,12 +100,15 @@ public class SkeletonSummoner : MonoBehaviour
     {
         indicator.position = position;
         bool readyToSpawn = (cooldownTimer <= 0f) && (dummiesRemaining > 0);
-
-        for (int i = 0; i < dummyIcons.Count; i++)
+        if(dummyIcons != null && dummyIcons.Count > 0)
         {
-            
-            dummyIcons[i].color = (i < dummiesRemaining) ? Color.white : new Color(1f, 1f, 1f, 0.38f);   
+            for (int i = 0; i < dummyIcons.Count; i++)
+            {
+                dummyIcons[i].color = (i < dummiesRemaining) ? Color.white : new Color(1f, 1f, 1f, 0.38f);   
+            }
         }
+        else
+        
 
         indicatorRenderer.color = (isValid && readyToSpawn) ? validColor : invalidColor;
     }
