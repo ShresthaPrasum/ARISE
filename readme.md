@@ -33,5 +33,8 @@
 ## Credit
 - Made with brain by Mama
 
+## Level Tutorials
+- <video controls src="https://user-cdn.hackclub-assets.com/01a1cdfe-9e00-7040-9f38-5291e5d981d8/2026-11-12%2009-53-27.mp4" title="Tutorial"></video>
+
 ## Demo
 - [ARISE](https://shresthaprasum.itch.io/arise)

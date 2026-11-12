@@ -1287,7 +1287,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 12498054365813751, guid: 3ccf3e4ec7f4ad74faae5e7ba46f55c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.86
+      value: 27.88
       objectReference: {fileID: 0}
     - target: {fileID: 12498054365813751, guid: 3ccf3e4ec7f4ad74faae5e7ba46f55c4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1327,15 +1327,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5150854805086700672, guid: 3ccf3e4ec7f4ad74faae5e7ba46f55c4, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5150854805086700672, guid: 3ccf3e4ec7f4ad74faae5e7ba46f55c4, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 1.9779084
+      value: 1.8133706
       objectReference: {fileID: 0}
     - target: {fileID: 5150854805086700672, guid: 3ccf3e4ec7f4ad74faae5e7ba46f55c4, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 1.1799288
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 8624572581910990567, guid: 3ccf3e4ec7f4ad74faae5e7ba46f55c4, type: 3}
       propertyPath: m_Name
@@ -1343,7 +1343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8647220891604547463, guid: 3ccf3e4ec7f4ad74faae5e7ba46f55c4, type: 3}
       propertyPath: m_Size.x
-      value: 1.8133706
+      value: 1.712723
       objectReference: {fileID: 0}
     - target: {fileID: 8647220891604547463, guid: 3ccf3e4ec7f4ad74faae5e7ba46f55c4, type: 3}
       propertyPath: m_Size.y
@@ -12517,6 +12517,10 @@ PrefabInstance:
       propertyPath: landingSound
       value: 
       objectReference: {fileID: 8300000, guid: 003862d2c29fb444d9a70e34dbc881f5, type: 3}
+    - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: normalGravity
+      value: 1.98
+      objectReference: {fileID: 0}
     - target: {fileID: 5034910567006950285, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: m_Name
       value: Player
@@ -12575,7 +12579,7 @@ PrefabInstance:
       objectReference: {fileID: 42230898}
     - target: {fileID: 7102662961416938832, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: maxDummies
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7102662961416938832, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: audioSource
