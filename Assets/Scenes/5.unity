@@ -1576,7 +1576,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.197
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16076,6 +16076,10 @@ PrefabInstance:
       propertyPath: respawnDelay
       value: 3.37
       objectReference: {fileID: 0}
+    - target: {fileID: 3757787630620748226, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
+      propertyPath: normalGravity
+      value: 2.04
+      objectReference: {fileID: 0}
     - target: {fileID: 5034910567006950285, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: m_Name
       value: Player
@@ -16187,7 +16191,7 @@ PrefabInstance:
     - target: {fileID: 7102662961416938832, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: 'dummyIcons.Array.data[6]'
       value: 
-      objectReference: {fileID: 1609218797}
+      objectReference: {fileID: 0}
     - target: {fileID: 8525566927905692668, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: m_SortingOrder
       value: 2

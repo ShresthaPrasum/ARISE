@@ -357,6 +357,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df9e770e20d9b3740a087ed3619b2902, type: 3}
+--- !u!1 &441079818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441079821}
+  - component: {fileID: 441079820}
+  - component: {fileID: 441079819}
+  m_Layer: 5
+  m_Name: Image (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &441079819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441079818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8984919759845746525, guid: c2bc11dafc8aa884a9e7365a0b9aeaa6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &441079820
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441079818}
+  m_CullTransparentMesh: 1
+--- !u!224 &441079821
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441079818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2125317089}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 244.4, y: 0.000013828}
+  m_SizeDelta: {x: 28.9151, y: 56.3797}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &463008289
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Killer
   audioSource: {fileID: 0}
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 523d518d09f19a544b91cef49fcc7e63, type: 3}
 --- !u!61 &567151959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12388,6 +12463,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5123876570019135898, guid: ba6a17552894d1645a6f6c0c77e9f0fc, type: 3}
       insertIndex: 5
       addedObject: {fileID: 1223009847}
+    - targetCorrespondingSourceObject: {fileID: 5123876570019135898, guid: ba6a17552894d1645a6f6c0c77e9f0fc, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 441079821}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba6a17552894d1645a6f6c0c77e9f0fc, type: 3}
 --- !u!95 &2553573267617197338 stripped
@@ -12521,7 +12599,7 @@ PrefabInstance:
       objectReference: {fileID: 1529475096}
     - target: {fileID: 7102662961416938832, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: dummyIcons.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7102662961416938832, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: 'dummyIcons.Array.data[0]'
@@ -12550,7 +12628,7 @@ PrefabInstance:
     - target: {fileID: 7102662961416938832, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: 'dummyIcons.Array.data[6]'
       value: 
-      objectReference: {fileID: 1609218797}
+      objectReference: {fileID: 441079819}
     - target: {fileID: 8525566927905692668, guid: c7b468dd09727c44b8496e5176caa6dc, type: 3}
       propertyPath: m_SortingOrder
       value: 2
